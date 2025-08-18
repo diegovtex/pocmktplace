@@ -1,0 +1,259 @@
+{
+  "store.home": {
+    "blocks": [
+      "list-context.image-list#demo1",
+      /* You can make references to blocks defined in other files.
+       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
+      "flex-layout.row#deals",
+      "__fold__",
+      "rich-text#shelf-title",
+      "image#example",
+      "flex-layout.row#shelf",
+      "image#example4",
+      "flex-layout.row#shelf2",
+      "rich-text#shelf-title3",
+      "flex-layout.row#imageBanners",
+      "image#example2",
+      "info-card#home"
+    ]
+  },
+
+  "list-context.image-list#demo1": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "height": 640,
+      "preload": true,
+      "images": [
+        {
+          "image": "https://etihadmktplace.vtexassets.com/assets/vtex.file-manager-graphql/images/a8db8b56-0c06-475e-ab66-0df57ad1edd7___14bda0fece71712529f9a208fe1262fa.png",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-mobile.png"
+        },
+        {
+          "image": "https://www.ufcstore.com/content/ws/all/661a6580-ccc2-400a-b825-7c3782a370ff__2401X1125.jpg",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+
+  "image#example": {
+    "props": {
+      "src": "https://static.myconnect.ae/-/media/yasconnect/project/ya/events-2025/family/harry-potter/v2/2732x320.jpg"
+    }
+  },
+
+  "rich-text#shelf-title": {
+    "props": {
+      "text": "## Next Events",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelf-title3": {
+    "props": {
+      "text": "## Coming Next",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection":"137"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+   "image#example4": {
+    "props": {
+      "src": "https://static.myconnect.ae/-/media/yasconnect/project/ya/events-2025/sports/hot-wheels/v2/2732x320.jpg"
+    }
+  },
+  "flex-layout.row#shelf2": {
+    "children": ["list-context.product-list#demo2"]
+  },
+  "list-context.product-list#demo2": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection":"138"
+    }
+  },
+
+  "flex-layout.row#imageBanners": {
+    "props": {
+      "blockClass": "imageBanners",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "flex-layout.col#banner1",
+      "flex-layout.col#banner2",
+      "flex-layout.col#banner3"
+    ]
+  },
+  "flex-layout.col#banner1": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "image#bannerFirst",
+      "rich-text#bannerTitle1",
+      "rich-text#bannerDesc1",
+      "rich-text#bannerLink1"
+    ]
+  },
+  "flex-layout.col#banner2": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "image#bannerSecond",
+      "rich-text#bannerTitle2",
+      "rich-text#bannerDesc2",
+      "rich-text#bannerLink2"
+    ]
+  },
+  "flex-layout.col#banner3": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "image#bannerThird",
+      "rich-text#bannerTitle3",
+      "rich-text#bannerDesc3",
+      "rich-text#bannerLink3"
+    ]
+  },
+  "image#bannerFirst": {
+    "props": {
+      "src": "https://static.myconnect.ae/-/media/yasconnect/project/ya/events-2025/concerts/andre-rieu/1200x708.jpg",
+      "maxHeight": 460,
+      "blockClass": "bannerThird"
+    }
+  },
+  "image#bannerSecond": {
+    "props": {
+      "src": "https://static.myconnect.ae/-/media/yasconnect/project/ya/events-2025/concerts/scorpions/1200x708.jpg",
+      "maxHeight": 460,
+      "blockClass": "bannerThird"
+    }
+  },
+  "image#bannerThird": {
+    "props": {
+      "src": "https://static.myconnect.ae/-/media/yasconnect/project/ya/events-2025/sports/nba/v4/en/1200x708.jpg",
+      "maxHeight": 460,
+      "blockClass": "bannerThird"
+    }
+  },
+  "rich-text#bannerTitle1": {
+    "props": {
+      "text": "#### ANDRÉ RIEU & HIS JOHANN STRAUSS ORCHESTRA",
+      "blockClass": "bannerTitle",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerDesc1": {
+    "props": {
+      "text": "The world’s favourite Dutch violinist and conductor, André Rieu, is set to return to Etihad Arena, Abu Dhabi with a spectacular new show.",
+      "blockClass": "bannerDesc",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerLink1": {
+    "props": {
+      "text": "Buy Tickets",
+      "blockClass": "bannerLink",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerTitle2": {
+    "props": {
+      "text": "#### COMING HOME - 60 YEARS OF SCORPIONS TOUR",
+      "blockClass": "bannerTitle",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerDesc2": {
+    "props": {
+      "text": "Legendary German rock icons Scorpions are heading back to the Middle East this October as part of their Coming Home - 60 Years of Scorpions tour",
+      "blockClass": "bannerDesc",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerLink2": {
+    "props": {
+      "text": "Buy Tickets",
+      "blockClass": "bannerLink",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerTitle3": {
+    "props": {
+      "text": "#### NBA ABU DHABI GAMES 2025",
+      "blockClass": "bannerTitle",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerDesc3": {
+    "props": {
+      "text": "The National Basketball Association (NBA) and the Department of Culture and Tourism – Abu Dhabi are bringing The NBA Abu Dhabi Games ",
+      "blockClass": "bannerDesc",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#bannerLink3": {
+    "props": {
+      "text": "Buy Tickets",
+      "blockClass": "bannerLink",
+      "textAlignment": "CENTER"
+    }
+  },
+
+
+  "image#example2": {
+    "props": {
+      "src": "https://static.myconnect.ae/-/media/yasconnect/project/ya/partners/2025/aldar/fahid-the-beach-house-2000x220.jpg"
+    }
+  },
+
+  "info-card#home": {
+    "props": {
+      "id": "info-card-home",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://static.myconnect.ae/-/media/yasconnect/project/ya/events-2025/sports/hot-wheels/v2/1200x708.jpg",
+      "headline": "Clearance Sale",
+      "callToActionText": "Buy Now",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-home",
+      "textAlignment": "center"
+    }
+  }
+}
